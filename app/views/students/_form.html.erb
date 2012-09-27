@@ -28,8 +28,8 @@
     <%= f.text_field :grade %>
   </div>
   <div class="field">
-    <%= f.label :school_id %><br />
-    <%= f.number_field :school_id %>
+    <%= f.label :school_id, "School" %><br />
+    <%= f.select :school_id, options_from_collection_for_select(@schools, 'id', 'name') %>
   </div>
   <div class="actions">
     <%= f.submit %>
