@@ -1,4 +1,4 @@
-School.seed do |s|
+School.seed_once(:name) do |s|
 	s.name = "Lucy Laney"
 	s.street = "3333 Penn Ave N"
 	s.city = "Minneapolis"
@@ -8,7 +8,7 @@ School.seed do |s|
 	s.ssw = "Edgar Young"
 end
 
-School.seed do |s|
+School.seed_once(:name) do |s|
 	s.name = "Nellie Stone Johnson"
 	s.street = "807 27th Ave N"
 	s.city = "Minneapolis"
@@ -18,7 +18,7 @@ School.seed do |s|
 	s.ssw = "Teri Schmitz"
 end
 
-School.seed do |s|
+School.seed_once(:name) do |s|
 	s.name = "Andersen United"
 	s.street = "1098 Andersen Lane"
 	s.city = "Minneapolis"
@@ -28,7 +28,7 @@ School.seed do |s|
 	s.ssw = "Julie Sailors"
 end
 
-School.seed do |s|
+School.seed_once(:name) do |s|
 	s.name = "Roosevelt High School"
 	s.street = "4029 28th Ave S"
 	s.city = "Minneapolis"
@@ -38,7 +38,7 @@ School.seed do |s|
 	s.ssw = "Steve Carney"
 end
 
-School.seed do |s|
+School.seed_once(:name) do |s|
 	s.name = "Patrick Henry High School"
 	s.street = "4320 Newton Ave N"
 	s.city = "Minneapolis"
