@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang ="en">
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
 
 <title>School Directory</title>
 </head>
 
+<body>
+
 <h1>School Directory</h1>
 
-<table>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<table class="table">
   <tr>
     <th>School Name</th>
     <th>Address</th>
@@ -42,5 +50,5 @@
 <br />
 
 <%= link_to 'New School', new_school_path %>
-
+</body>
 </html>
