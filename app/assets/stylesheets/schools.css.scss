@@ -4,13 +4,21 @@
 
 body {
 background-color: #87AFC1;
+
+}
+
+div#page {
 margin-left:5%;
 margin-right:5%;
 }
 
 table {
 background-color: white;
+border: solid rgb(103,127,148) 3px;
+}
 
+table th {
+background-color: #BD9D7C;
 }
 
 div#title {
