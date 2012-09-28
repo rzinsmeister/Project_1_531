@@ -11,13 +11,13 @@
 </head>
 
 <body>
-
-<h1>School Directory</h1>
-
+<div class="title">
+  <h1>School Directory</h1>
+</div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-<table class="table">
+<table class="table table-hover">
   <tr>
     <th>School Name</th>
     <th>Address</th>
@@ -48,7 +48,8 @@
 </table>
 
 <br />
-
+<div class="btn">
 <%= link_to 'New School', new_school_path %>
+</div>
 </body>
 </html>
