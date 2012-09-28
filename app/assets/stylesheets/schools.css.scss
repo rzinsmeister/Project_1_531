@@ -13,7 +13,10 @@ background-color: white;
 
 }
 
-div.title {
+div#title {
 text-align:center;
 padding-bottom: 40px;
 }
+
+/* Hide Stuff */
+ul.accessibility { display: none; }
