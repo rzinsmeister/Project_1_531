@@ -3,6 +3,8 @@ Education::Application.routes.draw do
 
   resources :schools
 
+  root :controller => 'Home', :action => :index
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
