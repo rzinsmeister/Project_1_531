@@ -2,41 +2,35 @@
 <html lang ="en">
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-
 <title>School Directory</title>
 </head>
 
 <body>
 
-
-
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <div id="header">
+  <div id="header">
 
     <ul class="accessibility">
       <li><a href="#navigation">Jump to Navigation</a></li>
     </ul>
 
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <ul class="nav">
-
-      <li><%= link_to 'Student Directory', students_path %></li>
-    
-    </ul>      
-  </div>
-</div>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Student Directory', students_path %></li>
+        </ul>      
+      </div>
     </div>
+  </div>
 
 
 <div id=page>
 <div id="title">
   <h1>School Directory</h1>
+</div>
+
+<div class="btn">
+<%= link_to 'New School', new_school_path %>
 </div>
 
 <table class="table">
@@ -70,9 +64,7 @@
 </table>
 
 <br />
-<div class="btn">
-<%= link_to 'New School', new_school_path %>
-</div>
+
 </div>
 </body>
 </html>

@@ -5,10 +5,29 @@
 
   </head>
   
-  <body>
+<body>
 
+  <div id="header">
+
+    <ul class="accessibility">
+      <li><a href="#navigation">Jump to Navigation</a></li>
+    </ul>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'School Directory', schools_path %></li>
+        </ul>      
+      </div>
+    </div>
+  </div>
 
 <h1>Students</h1>
+
+<div class="btn">
+<%= link_to 'New Student', new_student_path %>
+</div>
 
 <table>
   <tr>
@@ -38,7 +57,7 @@
 
 <br />
 
-<%= link_to 'New Student', new_student_path %>
+
 
   </body>
 </html>
