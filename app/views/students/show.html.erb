@@ -22,7 +22,11 @@
 
 <p>
   <b>School:</b>
-  <%= @student.school.name %>
+  <% if(@student.school.nil?) then %>
+    The student has no school to speak of.
+  <% else %>
+    <%= @student.school.name %>
+  <% end %>
 </p>
 
 

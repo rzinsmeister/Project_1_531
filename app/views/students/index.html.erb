@@ -47,7 +47,11 @@
     <td><%= student.last_name %></td>
     <td><%= student.date_of_birth %></td>
     <td><%= student.grade %></td>
-    <td><%= student.school.name %></td>
+    <td><% if(student.school.nil?) then %>
+    The student has no school to speak of.
+  <% else %>
+    <%= student.school.name %>
+  <% end %></td>
     <td><%= link_to 'Show', student %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
