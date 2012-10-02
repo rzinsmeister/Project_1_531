@@ -1,3 +1,9 @@
+<h1>Search Results</h1>
+
+<% if @schools.empty? %>
+  <h2>No schools with that name.</h2>  
+  
+<% else%>
 
 <table class="table">
   <tr>
@@ -28,3 +34,5 @@
   </tr>
 <% end %>
 </table>
+
+<% end %>

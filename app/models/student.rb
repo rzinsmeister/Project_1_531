@@ -3,4 +3,13 @@ class Student < ActiveRecord::Base
   belongs_to :school
 
   validates :first_name, :last_name, :grade, :presence => true
+
+  def self.search(search)
+    if search
+      where('first_name LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+
 end

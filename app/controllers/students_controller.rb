@@ -81,4 +81,8 @@ class StudentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def search
+    @students = Student.search(params[:search])
+  end
 end
