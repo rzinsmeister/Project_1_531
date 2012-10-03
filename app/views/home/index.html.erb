@@ -20,6 +20,7 @@
 
 <div id="studentsearch">
 <h3>Search for a Student</h3>
+
 <%= form_tag "studentssearch", :method => 'get' do %>  
     <%= text_field_tag :search, params[:search] %>  
     <%= submit_tag "Search", :name => nil %>  

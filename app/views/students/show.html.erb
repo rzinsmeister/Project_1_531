@@ -1,26 +1,45 @@
+
+  <div id="header">
+
+    <ul class="accessibility">
+      <li><a href="#navigation">Jump to Navigation</a></li>
+    </ul>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'School Directory', schools_path %></li>
+          <li><%= link_to 'Student Directory', students_path %></li>        
+        </ul>      
+      </div>
+    </div>
+  </div>
+
+<div id="page">
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="lead">
   <b>First Name:</b>
   <%= @student.first_name %>
 </p>
 
-<p>
+<p class="lead">
   <b>Last Name:</b>
   <%= @student.last_name %>
 </p>
 
-<p>
+<p class="lead">
   <b>Date of Birth:</b>
   <%= @student.date_of_birth %>
 </p>
 
-<p>
+<p class="lead">
   <b>Grade:</b>
   <%= @student.grade %>
 </p>
 
-<p>
+<p class="lead">
   <b>School:</b>
   <% if(@student.school.nil?) then %>
     The student has no school to speak of.
@@ -29,6 +48,10 @@
   <% end %>
 </p>
 
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
+<div class="btn">
+<%= link_to 'Edit', edit_student_path(@student) %>
+</div>
+<div class="btn">
 <%= link_to 'Back', students_path %>
+</div>
+</div>

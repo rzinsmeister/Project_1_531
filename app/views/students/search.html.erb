@@ -1,12 +1,31 @@
-<h2>Student Results</h2>
+
+  <div id="header">
+
+    <ul class="accessibility">
+      <li><a href="#navigation">Jump to Navigation</a></li>
+    </ul>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'School Directory', schools_path %></li>
+          <li><%= link_to 'Student Directory', students_path %></li>        
+        </ul>      
+      </div>
+    </div>
+  </div>
+
+<div id="page">
+<h1>Student Results</h1>
 
 
 <% if @students.empty? %>
-  <h2>No students with that name.</h2>  
+  <h2 class="alert alert-info">No students with that name.</h2>  
 
 <% else%>
 
-<table>
+<table class="table">
   <tr>
     <th>First Name</th>
     <th>Last Name</th>
@@ -36,3 +55,4 @@
 <% end %>
 </table>
 <% end %>
+</div>

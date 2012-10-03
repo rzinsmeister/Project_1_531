@@ -1,7 +1,25 @@
+  <div id="header">
+
+    <ul class="accessibility">
+      <li><a href="#navigation">Jump to Navigation</a></li>
+    </ul>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'School Directory', schools_path %></li>
+          <li><%= link_to 'Student Directory', students_path %></li>
+        </ul>      
+      </div>
+    </div>
+  </div>
+
+<div id="page">
 <h1>Search Results</h1>
 
 <% if @schools.empty? %>
-  <h2>No schools with that name.</h2>  
+  <h2 class="alert alert-info">No schools with that name.</h2>  
   
 <% else%>
 
@@ -36,3 +54,4 @@
 </table>
 
 <% end %>
+</div>
