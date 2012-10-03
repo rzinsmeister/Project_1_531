@@ -17,6 +17,7 @@
       <div class="navbar-inner">
         <ul class="nav">
           <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'School Directory', schools_path %></li>
           <li><%= link_to 'Student Directory', students_path %></li>
         </ul>      
       </div>
@@ -29,7 +30,7 @@
   <h1>School Directory</h1>
 </div>
 
-<div class="btn">
+<div class="btn" id="newschool">
 <%= link_to 'New School', new_school_path %>
 </div>
 

@@ -1,40 +1,65 @@
+  <div id="header">
+
+    <ul class="accessibility">
+      <li><a href="#navigation">Jump to Navigation</a></li>
+    </ul>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'School Directory', schools_path %></li>
+          <li><%= link_to 'Student Directory', students_path %></li>
+        </ul>      
+      </div>
+    </div>
+  </div>
+
+
+
+<div id="page">
+
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="lead">
   <b>School Name:</b>
   <%= @school.name %>
 </p>
 
-<p>
+<p class="lead">
   <b>Address:</b>
   <%= @school.street %>
 </p>
 
-<p>
+<p class="lead">
   <b>City:</b>
   <%= @school.city %>
 </p>
 
-<p>
+<p class="lead">
   <b>State:</b>
   <%= @school.state %>
 </p>
 
-<p>
+<p class="lead">
   <b>Zip:</b>
   <%= @school.zip %>
 </p>
 
-<p>
+<p class="lead">
   <b>Phone:</b>
   <%= @school.phone %>
 </p>
 
-<p>
+<p class="lead">
   <b>Social Worker:</b>
   <%= @school.ssw %>
 </p>
 
-
-<%= link_to 'Edit', edit_school_path(@school) %> |
+<div class="btn">
+<%= link_to 'Edit', edit_school_path(@school) %>
+</div>
+<div class="btn">
 <%= link_to 'Back', schools_path %>
+</div>
+</div>

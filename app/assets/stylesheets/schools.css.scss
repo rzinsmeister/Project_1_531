@@ -4,7 +4,6 @@
 
 body {
 background-color: #87AFC1;
-
 }
 
 div#page {
@@ -28,3 +27,26 @@ padding-bottom: 40px;
 
 /* Hide Stuff */
 ul.accessibility { display: none; }
+
+div#form {
+margin-left:10%;
+}
+
+div#new {
+margin-left:10%;
+margin-top:5%;
+}
+
+div#newschool {
+margin-bottom:20px;
+}
+
+div#newbutton {
+margin-left:20%;
+}
+
+div#editbutton {
+margin-top:40px;
+margin-left:20%;
+margin-bottom:40px;
+}
