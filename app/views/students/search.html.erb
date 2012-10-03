@@ -1,3 +1,11 @@
+<h2>Student Results</h2>
+
+
+<% if @students.empty? %>
+  <h2>No students with that name.</h2>  
+
+<% else%>
+
 <table>
   <tr>
     <th>First Name</th>
@@ -27,3 +35,4 @@
   </tr>
 <% end %>
 </table>
+<% end %>

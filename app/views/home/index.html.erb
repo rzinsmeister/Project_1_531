@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 
-
-<div class="hero-unit">
+<div class="hero-unit" id="head">
 <h1>Education Reference Guide</h1>
 <h2>Public Schools</h2>
 </div>
 
-<div class="btn btn-large">
+
+<div id="schoolsearch">
+<h3>Search for a School</h3>
+<%= form_tag "schoolssearch", :method => 'get' do %>  
+    <%= text_field_tag :search, params[:search] %>  
+    <%= submit_tag "Search", :name => nil %>  
+<% end %>  
+
+<div class="btn btn-large" id="schoolbutton">
 <%= link_to "Add a New School", schools_path %>
 </div>
+</div>
+
+<div id="studentsearch">
+<h3>Search for a Student</h3>
+<%= form_tag "studentssearch", :method => 'get' do %>  
+    <%= text_field_tag :search, params[:search] %>  
+    <%= submit_tag "Search", :name => nil %>  
+<% end %> 
 
 <div class="btn btn-large">
 <%= link_to "Add a New Student", students_path %>
 </div>
-
-<h2>Search for a School</h2>
-<%= form_tag "schoolssearch", :method => 'get' do %>  
-  <p>  
-    <%= text_field_tag :search, params[:search] %>  
-    <%= submit_tag "Search", :name => nil %>  
-  </p>  
-<% end %>  
-
-<h2>Search for a Student</h2>
-<%= form_tag "studentssearch", :method => 'get' do %>  
-  <p>  
-    <%= text_field_tag :search, params[:search] %>  
-    <%= submit_tag "Search", :name => nil %>  
-  </p>  
-<% end %> 
-
-
-
-
-
+</div>
