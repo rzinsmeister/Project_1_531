@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 
-<div class="hero-unit" id="head">
-<h1>Education Reference Guide</h1>
-<h2>Public Schools</h2>
-</div>
+<body>
+
+  <div id="header">
+
+    <ul class="accessibility">
+      <li><a href="#navigation">Jump to Navigation</a></li>
+    </ul>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><%= link_to 'Home', root_path %></li>
+        </ul>      
+      </div>
+    </div>
+  </div>
+
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Directories</li>
+                <li><%= link_to 'School', schools_path %></li>
+                <li><%= link_to 'Student', students_path %></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <div class="hero-unit" id="head">
+            <h1>Education Reference</h1>
+            <h2>Public Schools</h2>
+          </div>
+        </div>
+    
+      </div>
+
+
+    </div>
+
+
+
 
 
 <div id="schoolsearch">
@@ -30,3 +70,5 @@
 <%= link_to "Add a New Student", students_path %>
 </div>
 </div>
+</body>
+</html>
