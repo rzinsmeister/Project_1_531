@@ -1,6 +1,4 @@
-
   <div id="header">
-
     <ul class="accessibility">
       <li><a href="#navigation">Jump to Navigation</a></li>
     </ul>
@@ -8,20 +6,25 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <ul class="nav">
-          <li><%= link_to 'Home', root_path %></li>
+          <li class="divider-vertical"></li>
+          <li class="active"><%= link_to 'Home', root_path %></li>
+          <li class="divider-vertical"></li>
           <li><%= link_to 'School Directory', schools_path %></li>
-          <li><%= link_to 'Student Directory', students_path %></li>        
+          <li class="divider-vertical"></li>
+          <li><%= link_to 'Student Directory', students_path %></li>
         </ul>      
       </div>
     </div>
   </div>
 
-<div id="page">
-<h1>Student Results</h1>
 
+<div id="page">
+<div id="searchtitle" class="well">
+<h2>Search Results</h2>
+</div>
 
 <% if @students.empty? %>
-  <h2 class="alert alert-info">No students with that name.</h2>  
+  <h3 class="alert">No students with that name.</h3>  
 
 <% else%>
 

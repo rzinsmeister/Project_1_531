@@ -1,5 +1,4 @@
   <div id="header">
-
     <ul class="accessibility">
       <li><a href="#navigation">Jump to Navigation</a></li>
     </ul>
@@ -7,8 +6,11 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <ul class="nav">
-          <li><%= link_to 'Home', root_path %></li>
+          <li class="divider-vertical"></li>
+          <li class="active"><%= link_to 'Home', root_path %></li>
+          <li class="divider-vertical"></li>
           <li><%= link_to 'School Directory', schools_path %></li>
+          <li class="divider-vertical"></li>
           <li><%= link_to 'Student Directory', students_path %></li>
         </ul>      
       </div>
@@ -17,7 +19,8 @@
 
 
 
-<div id="page">
+
+<div id="page" class="alert alert-info">
 
 <p id="notice"><%= notice %></p>
 
@@ -55,11 +58,12 @@
   <b>Social Worker:</b>
   <%= @school.ssw %>
 </p>
-
+<div class ="btn-group">
 <div class="btn">
 <%= link_to 'Edit', edit_school_path(@school) %>
 </div>
 <div class="btn">
 <%= link_to 'Back', schools_path %>
+</div>
 </div>
 </div>
