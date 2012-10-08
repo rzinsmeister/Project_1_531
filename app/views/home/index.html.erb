@@ -45,12 +45,12 @@
 <h4>For a School</h4>
 <%= form_tag "schoolssearch", :method => 'get' do %>  
     <%= text_field_tag :search, params[:search] %>  
-    <%= submit_tag "Search", :name => nil %>  
+    <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
 <% end %>  
 <h4>For a Student</h4>
 <%= form_tag "studentssearch", :method => 'get' do %>  
     <%= text_field_tag :search, params[:search] %>  
-    <%= submit_tag "Search", :name => nil %>  
+    <%= submit_tag "Search", :name => nil,  :class=>'btn'  %>  
 <% end %> 
 
 

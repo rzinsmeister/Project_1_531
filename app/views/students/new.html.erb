@@ -1,6 +1,5 @@
 
   <div id="header">
-
     <ul class="accessibility">
       <li><a href="#navigation">Jump to Navigation</a></li>
     </ul>
@@ -8,21 +7,25 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <ul class="nav">
-          <li><%= link_to 'Home', root_path %></li>
+          <li class="divider-vertical"></li>
+          <li class="active"><%= link_to 'Home', root_path %></li>
+          <li class="divider-vertical"></li>
           <li><%= link_to 'School Directory', schools_path %></li>
-          <li><%= link_to 'Student Directory', students_path %></li>        
+          <li class="divider-vertical"></li>
+          <li><%= link_to 'Student Directory', students_path %></li>
         </ul>      
       </div>
     </div>
   </div>
 
+<div id="page">
 <div id="new">
-<h1>New student</h1>
+<h1><blockquote>
+New Student
+</blockquote></h1>
 </div>
 
-<%= render 'form' %>
-
-<div id="newbutton">
+<div id="newbutton" class="btn-group">
 <div class="btn">
 <%= link_to 'Show', @student %>
 </div>
@@ -30,3 +33,8 @@
 <%= link_to 'Back', students_path %>
 </div>
 </div>
+
+<%= render 'form' %>
+
+</div>
+
