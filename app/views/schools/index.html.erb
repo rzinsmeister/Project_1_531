@@ -8,7 +8,6 @@
 <body>
 
   <div id="header">
-
     <ul class="accessibility">
       <li><a href="#navigation">Jump to Navigation</a></li>
     </ul>
@@ -16,8 +15,11 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <ul class="nav">
-          <li><%= link_to 'Home', root_path %></li>
+          <li class="divider-vertical"></li>
+          <li class="active"><%= link_to 'Home', root_path %></li>
+          <li class="divider-vertical"></li>
           <li><%= link_to 'School Directory', schools_path %></li>
+          <li class="divider-vertical"></li>
           <li><%= link_to 'Student Directory', students_path %></li>
         </ul>      
       </div>
@@ -27,9 +29,10 @@
 
 <div id=page>
 <div id="title">
-  <h1>School Directory</h1>
+<div class="well">
+  <h2>Schools</h2>
 </div>
-
+</div>
 <div class="btn" id="newschool">
 <%= link_to 'New School', new_school_path %>
 </div>

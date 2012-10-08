@@ -4,28 +4,26 @@
 
 
 body {
-background-color: #87AFC1;
+background-color: #BBD5E0;
 }
 
 div#page {
 margin-left:5%;
 margin-right:5%;
+margin-bottom:40px;
 
 }
 
 table {
 background-color: white;
-border: solid rgb(103,127,148) 3px;
+border: solid rgb(103,127,148) 2px;
 }
 
 table th {
-background-color: #BD9D7C;
+background-color: rgb(103,127,148);
+color:white;
 }
 
-div#title {
-text-align:center;
-padding-bottom: 40px;
-}
 
 /* Hide Stuff */
 ul.accessibility { display: none; }
@@ -34,26 +32,28 @@ div#newstudent {
 margin-bottom:20px;
 }
 
-div#title {
+div.well {
 text-align:center;
-padding-bottom: 40px;
 }
 
 div#new {
 margin-left:10%;
 margin-top:5%;
+margin-bottom:30px;
 }
 
 div#form {
 margin-left:10%;
 }
+
 div#newbutton {
-margin-left:20%;
+margin-left:10%;
+margin-bottom:40px;
+
 }
 
 div#editbutton {
-margin-top:40px;
-margin-left:20%;
+margin-left:10%;
 margin-bottom:40px;
 }
 
