@@ -3,9 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-background-color: #BBD5E0;
-}
 
 div#page {
 margin-left:5%;
@@ -13,20 +10,6 @@ margin-right:5%;
 margin-bottom:40px;
 
 }
-
-table {
-background-color: white;
-border: solid rgb(103,127,148) 2px;
-}
-
-table th {
-background-color: rgb(103,127,148);
-color:white;
-}
-
-
-/* Hide Stuff */
-ul.accessibility { display: none; }
 
 div#newstudent {
 margin-bottom:20px;

@@ -1,0 +1,21 @@
+@import "reset";
+@import "fonts";
+@import "colors";
+
+/* Hide Stuff */
+ul.accessibility { display: none; }
+
+body {
+background-color: #BBD5E0;
+}
+
+table {
+background-color: white;
+border: solid rgb(103,127,148) 2px;
+}
+
+table th {
+background-color: rgb(103,127,148);
+color:white;
+}
+
