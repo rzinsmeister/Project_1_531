@@ -1,4 +1,6 @@
 Education::Application.routes.draw do
+  resources :session,  only: [:new, :create, :destroy]
+
   resources :students
 
   resources :schools
