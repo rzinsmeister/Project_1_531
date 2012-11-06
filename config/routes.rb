@@ -1,5 +1,9 @@
 Education::Application.routes.draw do
-  resources :session,  only: [:new, :create, :destroy]
+  #resources :sessions,  only: [:new, :create, :destroy]
+get '/login' => "sessions#new", as: "new_session"
+  post '/login' => "sessions#create", as: "session"
+  delete '/logout' => "sessions#destroy", as: "logout"
+
 
   resources :students
 

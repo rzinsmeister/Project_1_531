@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     if not session[:user_id]
       redirect_to new_session_url
     end
-
+  end
   def index
   end
 
