@@ -6,6 +6,8 @@ class HomeController < ApplicationController
       redirect_to new_session_url
     end
   end
+
+
   def index
   end
 

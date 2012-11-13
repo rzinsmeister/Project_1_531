@@ -2,6 +2,9 @@
 <div id=login>
 
 <h2>Enter your login to access the site</h2>
+<% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+<% end %>
 
 <%= form_tag session_path do %>
 <%= label_tag :username %>
