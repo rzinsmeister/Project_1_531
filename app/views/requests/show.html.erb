@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @request.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @request.email %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @request.position %>
+</p>
+
+<p>
+  <b>Reason:</b>
+  <%= @request.reason %>
+</p>
+
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', new_session_url %>
