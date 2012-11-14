@@ -5,7 +5,21 @@
   </head>
   <body>
     <h2>The following request was sent</h2>
-    
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Position</th>
+    <th>Reason</th>
+   </tr>
+   <tr>
+    <td><%= @request.name %></td>
+    <td><%= @request.email %></td>
+    <td><%= @request.position %></td>
+    <td><%= @request.reason %></td>
+   </tr>
+ </table>
 
   </body>
 </html>
