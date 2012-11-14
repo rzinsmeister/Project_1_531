@@ -3,8 +3,30 @@
   <head>
 
   </head>
-  
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('div.pop').each(function() {
+      $(this).qtip({
+        content: $('#hide-' + $(this).attr('id')),
+        style: {
+          name: 'cream'
+},        
+        position: {
+        corner: {
+         target: 'topMiddle',
+         tooltip: 'bottomLeft'
+      }
+},
+        show: 'mouseover',
+        hide: 'mouseout'
+
+      });
+    });
+  });   
+  </script>
 <body>
+
 
   <div id="header">
 
@@ -52,11 +74,19 @@
     <td><%= student.last_name %></td>
     <td><%= student.date_of_birth %></td>
     <td><%= student.grade %></td>
-    <td><% if(student.school.nil?) then %>
-    The student has no school to speak of.
-  <% else %>
-    <%= student.school.name %>
-  <% end %></td>
+    <td>
+      <% if(student.school.nil?) then %>
+        The student has no school to speak of.
+      <% else %>
+        <div id="<%= student.id %>" class="pop">    
+            <%= student.school.name %>
+        </div>
+        <div id="hide-<%= student.id %>" class="hide">
+        <%= student.school.phone %>
+        <%= student.school.ssw %>
+        </div>
+      <% end %>
+    </td>
     <td><%= link_to 'Show', student %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -68,6 +98,9 @@
 <br />
 
 </div>
+
+
+
 
 </body>
 

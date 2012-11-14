@@ -10,6 +10,10 @@ class StudentsController < ApplicationController
     end
   end
 
+
+
+
+
   # GET /students/1
   # GET /students/1.json
   def show
