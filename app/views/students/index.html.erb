@@ -70,8 +70,8 @@
   </tr>
 <% @students.each do |student| %>
   <tr>
-    <td><%= student.first_name %></td>
-    <td><%= student.last_name %></td>
+    <td><%= link_to student.first_name, student %></td>
+    <td><%= link_to student.last_name, student %></td>
     <td><%= student.date_of_birth %></td>
     <td><%= student.grade %></td>
     <td>
@@ -79,7 +79,7 @@
         The student has no school to speak of.
       <% else %>
         <div id="<%= student.id %>" class="pop">    
-            <%= student.school.name %>
+            <%= link_to student.school.name, school_path(student.school.id) %>
         </div>
         <div id="hide-<%= student.id %>" class="hide">
         <%= student.school.phone %>
@@ -87,7 +87,7 @@
         </div>
       <% end %>
     </td>
-    <td><%= link_to 'Show', student %></td>
+    <td><%=  %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
