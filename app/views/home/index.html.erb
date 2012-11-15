@@ -23,6 +23,8 @@
           <li><%= link_to 'Student Directory', students_path %></li>
           <li class="divider-vertical"></li>
           <li><%= link_to "Logout", logout_path %></li>
+          <li class="divider-vertical"></li>
+         <div id="userlogin"> <li><%= session[:username] %></li></div>
         </ul>      
       </div>
     </div>
