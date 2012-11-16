@@ -1,13 +1,12 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+<title>Index</title>
 </head>
+
 <body>
-
-
-
   <div id="header">
-
     <ul class="accessibility">
       <li><a href="#navigation">Jump to Navigation</a></li>
     </ul>
@@ -22,6 +21,8 @@
           <li class="divider-vertical"></li>
           <li><%= link_to 'Student Directory', students_path %></li>
           <li class="divider-vertical"></li>
+          <li><%= link_to "Reports" %></li>
+          <li class="divider-vertical"></li>
           <li><%= link_to "Logout", logout_path %></li>
           <li class="divider-vertical"></li>
          <div id="userlogin"> <li><%= session[:username] %></li></div>
@@ -30,43 +31,41 @@
     </div>
   </div>
 
-          <div class="hero-unit" id="head">
-            <h1>Education Reference</h1>
-            <h2>Public Schools</h2>
-          </div>
+    <div class="hero-unit" id="head">
+      <h1>Education Reference</h1>
+      <h2>Public Schools</h2>
+    </div>
 
- <div id="quicklinks">
-<h3>Quick Links</h3>
-<div class="btn-group btn-group-vertical">
-<div class="btn btn-large" id="schoolbutton">
-<%= link_to "Add a New School", new_school_path %>
-</div>
-<div class="btn btn-large">
-<%= link_to "Add a New Student", new_student_path %>
-</div>
-</div>
-</div>
+   <div id="quicklinks">
+      <h3>Quick Links</h3>
+      <div class="btn-group btn-group-vertical">
+      <div class="btn btn-large" id="schoolbutton">
+      <%= link_to "Add a New School", new_school_path %>
+    </div>
 
+    <div class="btn btn-large">
+      <%= link_to "Add a New Student", new_student_path %>
+    </div>
 
-<div id="search">
-<h3>Search</h3>
-<h4>For a School</h4>
-<%= form_tag "schoolssearch", :method => 'get' do %>  
-    <%= text_field_tag :search, params[:search] %>  
-    <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
-<% end %>  
-<h4>For a Student</h4>
-<%= form_tag "studentssearch", :method => 'get' do %>  
-    <%= text_field_tag :search, params[:search] %>  
-    <%= submit_tag "Search", :name => nil,  :class=>'btn'  %>  
-<% end %> 
+  </div>
+  </div>
 
+  <div id="search">
+    <h3>Search</h3>
+    <h4>For a School</h4>
+    <%= form_tag "schoolssearch", :method => 'get' do %>  
+        <%= text_field_tag :search, params[:search] %>  
+        <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
+    <% end %>  
+    <h4>For a Student</h4>
+    <%= form_tag "studentssearch", :method => 'get' do %>  
+        <%= text_field_tag :search, params[:search] %>  
+        <%= submit_tag "Search", :name => nil,  :class=>'btn'  %>  
+    <% end %> 
+  </div>
 
-</div>
-
-<div id="footer">
-
-</div>
+  <div id="footer">
+  </div>
 
 </body>
 </html>

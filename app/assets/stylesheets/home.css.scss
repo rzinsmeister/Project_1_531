@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
 div#head {
 margin-bottom:40px;
 margin-right:2%;
@@ -13,6 +14,16 @@ div#quicklinks {
 margin-left:5%;
 margin-right:2%;
 position:absolute;
+}
+
+div#quicklinks h3 {
+margin-bottom: 24px;
+font-size: 18px;
+}
+
+div#search h3 {
+margin-bottom: 24px;
+font-size: 18px;
 }
 
 div#search {

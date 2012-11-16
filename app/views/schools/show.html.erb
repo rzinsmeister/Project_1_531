@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Index</title>
+</head>
+
+<body>
   <div id="header">
     <ul class="accessibility">
       <li><a href="#navigation">Jump to Navigation</a></li>
@@ -12,11 +20,16 @@
           <li><%= link_to 'School Directory', schools_path %></li>
           <li class="divider-vertical"></li>
           <li><%= link_to 'Student Directory', students_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Reports" %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Logout", logout_path %></li>
+          <li class="divider-vertical"></li>
+         <div id="userlogin"> <li><%= session[:username] %></li></div>
         </ul>      
       </div>
     </div>
   </div>
-
 
 
 
@@ -67,3 +80,6 @@
 </div>
 </div>
 </div>
+</body>
+</html>
+

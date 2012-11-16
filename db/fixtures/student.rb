@@ -1,3 +1,5 @@
+Student.delete_all
+
 Student.seed_once(:first_name, :last_name, :date_of_birth) do |s|
 	s.first_name = "Le-a"
 	s.last_name = "Johnson"

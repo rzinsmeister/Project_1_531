@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang ="en">
-<head>
 
+<html>
+<head>
 <title>School Directory</title>
 </head>
 
@@ -21,54 +21,61 @@
           <li><%= link_to 'School Directory', schools_path %></li>
           <li class="divider-vertical"></li>
           <li><%= link_to 'Student Directory', students_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Reports" %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Logout", logout_path %></li>
+          <li class="divider-vertical"></li>
+         <div id="userlogin"> <li><%= session[:username] %></li></div>
         </ul>      
       </div>
     </div>
   </div>
 
+  <div id=page>
 
-<div id=page>
-<div id="title">
-<div class="well">
-  <h2>Schools</h2>
-</div>
-</div>
-<div class="btn" id="newschool">
-<%= link_to 'New School', new_school_path %>
-</div>
+    <div id="title">
+    <div class="well">
+      <h2>Schools</h2>
+    </div>
+    </div>
 
-<table class="table">
-  <tr>
-    <th>School Name</th>
-    <th>Address</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Zip</th>
-    <th>Phone</th>
-    <th>Social Worker</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="btn" id="newschool">
+    <%= link_to 'New School', new_school_path %>
+    </div>
 
-<% @schools.each do |school| %>
-  <tr>
-    <td><%= link_to school.name, school %></td>
-    <td><%= school.street %></td>
-    <td><%= school.city %></td>
-    <td><%= school.state %></td>
-    <td><%= school.zip %></td>
-    <td><%= school.phone %></td>
-    <td><%= school.ssw %></td>
-    <td><%= %></td>
-    <td><%= link_to 'Edit', edit_school_path(school) %></td>
-    <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <table class="table">
+      <tr>
+        <th>School Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+        <th>Phone</th>
+        <th>Social Worker</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<br />
+    <% @schools.each do |school| %>
+      <tr>
+        <td><%= link_to school.name, school %></td>
+        <td><%= school.street %></td>
+        <td><%= school.city %></td>
+        <td><%= school.state %></td>
+        <td><%= school.zip %></td>
+        <td><%= school.phone %></td>
+        <td><%= school.ssw %></td>
+        <td><%= %></td>
+        <td><%= link_to 'Edit', edit_school_path(school) %></td>
+        <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
 
-</div>
+    <br />
+
+  </div>
 </body>
 </html>
