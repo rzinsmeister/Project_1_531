@@ -93,5 +93,7 @@ class SchoolsController < ApplicationController
   def search
     @schools = School.search(params[:search])
   end
+
+
 end
 

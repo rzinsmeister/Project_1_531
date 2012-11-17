@@ -31,7 +31,11 @@
     </div>
   </div>
 
-
+   <h4>Run a Report for a School</h4>
+    <%= form_tag "reportstudentbyschool", :method => 'get' do %>  
+        <%= text_field_tag :search, params[:search] %>  
+        <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
+    <% end %>  
 
 
 

@@ -98,4 +98,5 @@ class StudentsController < ApplicationController
   def search
     @students = Student.search(params[:search])
   end
+
 end
