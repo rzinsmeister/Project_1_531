@@ -1,4 +1,5 @@
 Education::Application.routes.draw do
+  resources :report
   resources :requests
 
   #resources :sessions,  only: [:new, :create, :destroy]
