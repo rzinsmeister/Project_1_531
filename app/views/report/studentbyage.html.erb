@@ -1,0 +1,22 @@
+<table class="table">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Date of Birth</th>
+    <th>Grade</th>
+    <th>School</th>
+  </tr>
+
+<% @results.each do |result| %>
+  <tr>
+    <td><%= result.first_name %></td>
+    <td><%= result.last_name %></td>
+    <td><%= result.date_of_birth %></td>
+    <td><%= result.grade %></td>
+    <td><% if(result.school.nil?) then %>
+    The student has no school to speak of.
+  <% else %>
+    <%= result.school.name %>
+  <% end %></td>
+<% end %>
+</table>

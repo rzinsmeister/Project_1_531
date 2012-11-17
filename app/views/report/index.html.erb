@@ -37,6 +37,12 @@
         <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
     <% end %>  
 
+   <h4>Run a Report by Age</h4>
+   <h5>Please enter year of birth</h5>
+    <%= form_tag "reportstudentbyage", :method => 'get' do %>  
+        <%= text_field_tag :search, params[:search] %>  
+        <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
+    <% end %>  
 
 
 

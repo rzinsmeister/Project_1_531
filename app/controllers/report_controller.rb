@@ -15,4 +15,18 @@ class ReportController < ApplicationController
         redirect_to report_index_url
       end
   end
+
+  def studentbyage
+    @studentbyage = params[:search]
+
+    @student = Student.where('grade = ?', "#{@studentbyage}")
+      if @student.length > 0
+        @results = @student
+      else 
+        flash[:notice] = "Grade not found, please check your entry"
+        redirect_to report_index_url
+      end
+  end
+
+
 end

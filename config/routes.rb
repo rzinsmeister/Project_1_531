@@ -20,6 +20,7 @@ Education::Application.routes.draw do
 
   match 'reportstudentbyschool' => 'report#studentbyschool'
 
+  match 'reportstudentbyage' => 'report#studentbyage'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
