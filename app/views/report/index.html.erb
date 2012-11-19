@@ -2,10 +2,6 @@
 
 <body>
   <div id="header">
-    <ul class="accessibility">
-      <li><a href="#navigation">Jump to Navigation</a></li>
-    </ul>
-
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <ul class="nav">
@@ -16,7 +12,7 @@
           <li class="divider-vertical"></li>
           <li><%= link_to 'Student Directory', students_path %></li>
           <li class="divider-vertical"></li>
-          <li><%= link_to "Reports" %></li>
+          <li><%= link_to "Reports", report_index_url %></li>
           <li class="divider-vertical"></li>
           <li><%= link_to "Logout", logout_path %></li>
           <li class="divider-vertical"></li>
@@ -26,30 +22,28 @@
     </div>
   </div>
 
-   <h4>Run a Report for a School</h4>
-<% if flash[:notice1] %>
-    <div id="notice"><%= flash[:notice1] %></div>
-<% end %>
+<div id="report">
+   <h2>Run a Report for a School</h2>
+   <h3>Please enter name of school</h3>
+    <% if flash[:notice1] %>
+        <div id="notice"><%= flash[:notice1] %></div>
+    <% end %>
     <%= form_tag "reportstudentbyschool", :method => 'get' do %>  
         <%= text_field_tag :search, params[:search] %>  
-        <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
+        <%= submit_tag "Run", :name => nil, :class=>'btn' %>  
     <% end %>  
-
-   <h4>Run a Report by Age</h4>
-   <h5>Please enter year of birth</h5>
+</div>
+<div id="report">
+   <h2>Run a Report by Age</h2>
+   <h3>Please enter grade</h3>
 <% if flash[:notice] %>
     <div id="notice"><%= flash[:notice] %></div>
 <% end %>
     <%= form_tag "reportstudentbyage", :method => 'get' do %>  
         <%= text_field_tag :search, params[:search] %>  
-        <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
+        <%= submit_tag "Run", :name => nil, :class=>'btn' %>  
     <% end %>  
-
-
-
-
-
-
+</div>
 
 </body>
 

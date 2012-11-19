@@ -1,7 +1,28 @@
+<body>
+  <div id="header">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li class="divider-vertical"></li>
+          <li class="active"><%= link_to 'Home', root_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to 'School Directory', schools_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to 'Student Directory', students_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Reports", report_index_url %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Logout", logout_path %></li>
+          <li class="divider-vertical"></li>
+         <div id="userlogin"> <li><%= session[:username] %></li></div>
+        </ul>      
+      </div>
+    </div>
+  </div>
 
-
-
-
+<div id="page">
+<div id="results">
+<h2>Results</h2>
 <table class="table">
   <tr>
     <th>First Name</th>
@@ -24,3 +45,9 @@
   <% end %></td>
 <% end %>
 </table>
+<div class="btn">
+<%= link_to 'Back', report_index_url %>
+</div>
+</div>
+</div>
+</body>
