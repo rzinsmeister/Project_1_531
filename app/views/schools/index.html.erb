@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-<title>School Directory</title>
-</head>
-
 <body>
 
   <div id="header">
-    <ul class="accessibility">
-      <li><a href="#navigation">Jump to Navigation</a></li>
-    </ul>
-
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <ul class="nav">
@@ -22,7 +11,7 @@
           <li class="divider-vertical"></li>
           <li><%= link_to 'Student Directory', students_path %></li>
           <li class="divider-vertical"></li>
-          <li><%= link_to "Reports" %></li>
+          <li><%= link_to "Reports", report_index_url %></li>
           <li class="divider-vertical"></li>
           <li><%= link_to "Logout", logout_path %></li>
           <li class="divider-vertical"></li>
@@ -78,4 +67,4 @@
 
   </div>
 </body>
-</html>
+

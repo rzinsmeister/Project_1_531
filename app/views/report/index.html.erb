@@ -1,9 +1,4 @@
-<!DOCTYPE html>
 
-<html>
-<head>
-<title>Index</title>
-</head>
 
 <body>
   <div id="header">
@@ -32,6 +27,9 @@
   </div>
 
    <h4>Run a Report for a School</h4>
+<% if flash[:notice1] %>
+    <div id="notice"><%= flash[:notice1] %></div>
+<% end %>
     <%= form_tag "reportstudentbyschool", :method => 'get' do %>  
         <%= text_field_tag :search, params[:search] %>  
         <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
@@ -39,6 +37,9 @@
 
    <h4>Run a Report by Age</h4>
    <h5>Please enter year of birth</h5>
+<% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+<% end %>
     <%= form_tag "reportstudentbyage", :method => 'get' do %>  
         <%= text_field_tag :search, params[:search] %>  
         <%= submit_tag "Search", :name => nil, :class=>'btn' %>  
@@ -51,4 +52,4 @@
 
 
 </body>
-</html>
+

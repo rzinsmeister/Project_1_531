@@ -1,8 +1,5 @@
+<body>
   <div id="header">
-    <ul class="accessibility">
-      <li><a href="#navigation">Jump to Navigation</a></li>
-    </ul>
-
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <ul class="nav">
@@ -12,11 +9,16 @@
           <li><%= link_to 'School Directory', schools_path %></li>
           <li class="divider-vertical"></li>
           <li><%= link_to 'Student Directory', students_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Reports", report_index_url %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Logout", logout_path %></li>
+          <li class="divider-vertical"></li>
+         <div id="userlogin"> <li><%= session[:username] %></li></div>
         </ul>      
       </div>
     </div>
   </div>
-
 <div id="page">
 <div id="searchtitle" class="well">
 <h2>Search Results</h2>
@@ -63,3 +65,5 @@
 </div>
 
 </div>
+
+</body>

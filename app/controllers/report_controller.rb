@@ -1,5 +1,14 @@
 class ReportController < ApplicationController
 
+
+  before_filter :check_authentication
+  def check_authentication
+    if not session[:user_id]
+      redirect_to new_session_url
+    end
+  end
+
+
   def index
   end
 
@@ -11,7 +20,7 @@ class ReportController < ApplicationController
       if @school.length == 1
         @results = Student.where('school_id=?', @school[0].id)
       else 
-        flash[:notice] = "School not found, please check your entry"
+        flash[:notice1] = "School not found, please check your entry"
         redirect_to report_index_url
       end
   end
