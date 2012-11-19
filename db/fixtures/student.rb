@@ -31,3 +31,50 @@ Student.seed_once(:first_name, :last_name, :date_of_birth) do |s|
 	s.grade = "9"
 	s.school_id = "4"
 end
+
+Student.seed_once(:first_name, :last_name, :date_of_birth) do |s|
+	s.first_name = "Kesha"
+	s.last_name = "Jones"
+	s.date_of_birth = "10 June 2009"
+	s.grade = "NA"
+	s.school_id = ""
+end
+
+Student.seed_once(:first_name, :last_name, :date_of_birth) do |s|
+	s.first_name = "Damon"
+	s.last_name = "Hill"
+	s.date_of_birth = "19 February 2008"
+	s.grade = "NA"
+	s.school_id = ""
+end
+
+Student.seed_once(:first_name, :last_name, :date_of_birth) do |s|
+	s.first_name = "London"
+	s.last_name = "Philips"
+	s.date_of_birth = "29 April 2008"
+	s.grade = "NA"
+	s.school_id = ""
+end
+
+Student.seed_once(:first_name, :last_name, :date_of_birth) do |s|
+	s.first_name = "Kelly"
+	s.last_name = "Goodbear"
+	s.date_of_birth = "4 March 1995"
+	s.grade = "9"
+	s.school_id = "4"
+end
+
+Student.seed_once(:first_name, :last_name, :date_of_birth) do |s|
+	s.first_name = "Jessie"
+	s.last_name = "Syed"
+	s.date_of_birth = "15 July 1995"
+	s.grade = "9"
+	s.school_id = "4"
+end
+
+
+
+
+
+
+
