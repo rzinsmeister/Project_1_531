@@ -1,3 +1,20 @@
 // Place all the styles related to the requests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#request {
+margin-top:48px;
+margin-bottom: 24px;
+font-size:24px;
+}
+
+div#requestshow {
+margin-top:48px;
+margin-bottom: 24px;
+margin-left: 10%;
+margin-right: 10%;
+}
+
+div#requestshow p {
+margin-bottom:12px;
+}
