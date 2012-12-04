@@ -7,12 +7,12 @@
 ul.accessibility { display: none; }
 
 body {
-background-color: rgb(187,213,224);
+background-color: $background;
 }
 
 table {
 background-color: white;
-border: solid rgb(103,127,148) 2px;
+border: solid $border 2px;
 }
 
 table th {
